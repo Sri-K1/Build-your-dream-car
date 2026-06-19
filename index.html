@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dream Car Builder</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="app">
+            <header>
+                <h1>Dream Garage</h1>
+                <p>Build Your Dream Car</p>
+            </header>
+            <main>
+                <section class="garage">
+                    <div class="background"></div>
+                    <div id="carContainer">
+                        <div id="spoiler"></div>
+                        <div id="car">
+                            <div class="window"></div>
+                            <div class="wheel wheel-front">
+                                <div class="rim"></div>
+                            </div>
+                            <div class="wheel wheel-back">
+                                <div class="rim"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="contols">
+                <h2>Customize</h2>
+                <div class="control-group">
+                    <label>Paint Color</label>
+                    <div clas="colors">
+                        <button class="color-btn" 
+                                data-color="#ff3b30"
+                                style="background:#ff3b30">
+                        </button>
+                        <button class="color-btn"
+                                data-color="#007aff"
+                                style="background:#007aff">
+                        </button>
+                        <button class="color-btn"
+                                data-color="#34c759"
+                                style="background:#34c759">
+                        </button>
+                                <button class="color-btn"
+                                data-color="#111111"
+                                style="background:#111111">
+                        </button>
+                                <button class="color-btn"
+                                data-color="#ffffff"
+                                style="background:#ffffff">
+                        </button>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label>Wheel Style</label>
+                    <select id="wheelSelect">
+                        <option value="sport">Sport</option>
+                        <option value="racing">Racing</option>
+                        <option value="luxury">Luxury</option>
+                    </select>
+                </div>
+                //More code left...
+             
+</html>
