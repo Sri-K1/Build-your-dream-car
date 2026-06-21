@@ -63,6 +63,36 @@
                         <option value="luxury">Luxury</option>
                     </select>
                 </div>
-                //More code left...
-             
+                <div class="control-group">
+                    <label>
+                        Ride Height: 
+                        <span id="rideHeightValue">0</span>
+                    </label>
+                    <input 
+                        type="range"
+                        id="rideHeight"
+                        min="-20"
+                        max="20"
+                        value="0">
+                </div>
+                <div class="control group">
+                    <label>Total Price</label>
+                    <div id="priceDisplay">30,000</div>
+                </div>
+                <div class="buttons">
+                    <button id="saveBuild">
+                        Save Build
+                    </button>
+                    <button id="loadBuild">
+                        Load Build
+                    </button>
+                    <button id="resetBuild">
+                        Reset
+                    </button>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>            
 </html>
