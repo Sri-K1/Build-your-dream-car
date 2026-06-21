@@ -45,3 +45,97 @@ main{
 .controls h2{
     margin-bottom: 25px;
 }
+/* Main Garage Background */
+.background{
+    position: absolute;
+    inset:0;
+    background: linear-gradient(to bottom, #5482d061, #92c2d8d3);
+    z-index: 0;
+}
+.background::after{
+    content:"";
+    position:absolute;
+    bottom: 0;
+    width:100%;
+    height: 35%;
+    background: repeating-linear-gradient(90deg, #a9bbd4 0px, #3b4859 80px, #69b1c9ba 80px, #76b6ca 160px);
+}
+/* Car Container */
+.carContainer{
+    position:absolute;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    width: 520px;
+    height: 260px;
+    z-index: 5; 
+}
+/* Car Body and Roof */
+.car{
+    position:absolute;
+    left: 50%;
+    bottom: 40px;
+    transform:translateX(-50%);
+    width: 420px;
+    height:120px;
+    background:#ff3b30;
+    border-radius: 30px 70px 20px 20px;
+    transition: background 0.3s ease-in, transform 0.3s ease-in;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+}
+.car::before{
+    content: "";
+    position: absolute;
+    width: 210px;
+    height: 70px;
+    left: 95px;
+    top: -55px;
+    background: inherit;
+    border-radius: 70px 70px 0 0;
+}
+.car::after{
+    content:"";
+    position: absolute;
+    width:40px;
+    height: 25px;
+    right:10px;
+    top: 35px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+}
+/* Car Windows and Wheels */
+.window{
+    position: absolute;
+    top: -42px;
+    left: 118px;
+    width: 165px;
+    height: 48px;
+    background: #87ceeb;
+    border-radius: 40px 40px 8px 8px;
+    transition: background 0.5s ease-in;
+}
+.wheel{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: #111;
+    border-radius: 50%;
+    bottom: -35px;
+    border: 5px solid #222;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    transition: transform 0.5s ease;
+}
+.wheel-front{
+    right: 45px;
+}
+.wheel-back{
+    left: 45px;
+}
+.rim{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: #c0c0c0;
+}
