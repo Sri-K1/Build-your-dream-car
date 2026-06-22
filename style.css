@@ -61,7 +61,7 @@ main{
     background: repeating-linear-gradient(90deg, #a9bbd4 0px, #3b4859 80px, #69b1c9ba 80px, #76b6ca 160px);
 }
 /* Car Container */
-.carContainer{
+#carContainer{
     position:absolute;
     left: 50%;
     right: 50%;
@@ -71,7 +71,7 @@ main{
     z-index: 5; 
 }
 /* Car Body and Roof */
-.car{
+#car{
     position:absolute;
     left: 50%;
     bottom: 40px;
@@ -83,7 +83,7 @@ main{
     transition: background 0.3s ease-in, transform 0.3s ease-in;
     box-shadow: 0 15px 40px rgba(0,0,0,0.4);
 }
-.car::before{
+#car::before{
     content: "";
     position: absolute;
     width: 210px;
@@ -93,7 +93,7 @@ main{
     background: inherit;
     border-radius: 70px 70px 0 0;
 }
-.car::after{
+#car::after{
     content:"";
     position: absolute;
     width:40px;
@@ -138,4 +138,85 @@ main{
     height: 45px;
     border-radius: 50%;
     background: #c0c0c0;
+}
+/* Spoiler styles */
+#Spoiler{
+    position: absolute;
+    width: 60px;
+    height:10px;
+    right: 40px;
+    top: 95px;
+    background: transparent;
+    border-radius: 10px;
+    transition: all 0.5 ease;
+}
+/* Control group and colors */
+.control-group{
+    margin-bottom: 30px;
+}
+.control-group label{
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+.colors{
+    display: flex;
+    gap:12px;
+    flex-wrap:wrap;
+}
+.color-btn{
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 3px solid white;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.colors-btn:hover{
+    transform: scale(1.15);
+}
+select{
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    background:#303b4c;
+    color: white;
+    font-size: 1rem;
+}
+input[type="range"]
+{
+    width: 100%;
+    cursor: pointer;
+}
+#priceDisplay
+{
+    font-size: 2 rem;
+    font-weight: 700;
+    color:#4ade08;
+}
+/* Buttons */
+.buttons{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.buttons button{
+    border: none;
+    padding: 14px;
+    border-radius: 12px;
+    background:#2563eb;
+    color:white;
+    font-size:1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+.buttons button:hover
+{
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+#resetBuild{
+    background: #ec3535;
 }
