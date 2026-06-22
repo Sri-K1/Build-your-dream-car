@@ -1,98 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Dream Car Builder</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <div class="app">
-            <header>
-                <h1>Dream Garage</h1>
-                <p>Build Your Dream Car</p>
-            </header>
-            <main>
-                <section class="garage">
-                    <div class="background"></div>
-                    <div id="carContainer">
-                        <div id="spoiler"></div>
-                        <div id="car">
-                            <div class="window"></div>
-                            <div class="wheel wheel-front">
-                                <div class="rim"></div>
-                            </div>
-                            <div class="wheel wheel-back">
-                                <div class="rim"></div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section class="contols">
-                <h2>Customize</h2>
-                <div class="control-group">
-                    <label>Paint Color</label>
-                    <div clas="colors">
-                        <button class="color-btn" 
-                                data-color="#ff3b30"
-                                style="background:#ff3b30">
-                        </button>
-                        <button class="color-btn"
-                                data-color="#007aff"
-                                style="background:#007aff">
-                        </button>
-                        <button class="color-btn"
-                                data-color="#34c759"
-                                style="background:#34c759">
-                        </button>
-                                <button class="color-btn"
-                                data-color="#111111"
-                                style="background:#111111">
-                        </button>
-                                <button class="color-btn"
-                                data-color="#ffffff"
-                                style="background:#ffffff">
-                        </button>
-                    </div>
-                </div>
-                <div class="control-group">
-                    <label>Wheel Style</label>
-                    <select id="wheelSelect">
-                        <option value="sport">Sport</option>
-                        <option value="racing">Racing</option>
-                        <option value="luxury">Luxury</option>
-                    </select>
-                </div>
-                <div class="control-group">
-                    <label>
-                        Ride Height: 
-                        <span id="rideHeightValue">0</span>
-                    </label>
-                    <input 
-                        type="range"
-                        id="rideHeight"
-                        min="-20"
-                        max="20"
-                        value="0">
-                </div>
-                <div class="control group">
-                    <label>Total Price</label>
-                    <div id="priceDisplay">30,000</div>
-                </div>
-                <div class="buttons">
-                    <button id="saveBuild">
-                        Save Build
-                    </button>
-                    <button id="loadBuild">
-                        Load Build
-                    </button>
-                    <button id="resetBuild">
-                        Reset
-                    </button>
-                </div>
-            </section>
-        </main>
-    </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream Garage</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="homeScreen" class="screen active">
+        <nav>
+            <h1>DREAM GARAGE</h1>
+        </nav>
+        <div class="hero">
+            <h2>Build Your Dream Car</h2>
+            <p> Luxury. Performance. Your Dream, Now Real.</p>
+            <div class="hero-buttons">
+                <button id="buildBtn">Build Your Car</button>
+                <button id="exploreBtn">Explore Models</button>
+            </div>
+        </div>
+    </section>
+    <section id="exploreScreen" class="screen">
+        <button class="back-btn" id="backFromExplore">Back</button>
+        <h2>Explore Models</h2>
+        <div class="model-grid">
+            <div class="model-card">
+                <img src="assets/cars/sedan-black.png">
+                <h3>Sedan</h3>
+                <p>Where Comfort meets Performance.</p>
+            </div>
+            <div class="model-card">
+                <img src="assets/cars/coupe-black.png">
+                <h3>Coupe</h3>
+                <p>Sporty, Agresssive, and Compact.</p>
+            </div>
+            <div class="model-card">
+                <img src="assets/cars/supercar-black.png">
+                <h3>Supercar</h3>
+                <p>Unmatchable Performance at an Unmatchable Price</p>
+            </div>
+        </div>
+    </section>
+    <!-- Car Builder -->
+    <section id="buildScreen" class="screen">
+        <button class="back-btn" id="backFromBuild">Back</button>
+        <h2>Select Your Body Style</h2>
+        <div class="model-grid">
+            <div class="model-card selectable"
+                 data-model="sedan">
+                <img src="assets/cars/sedan-black.png">
+                <h3>Sedan</h3>
+                <span>$35,000</span>
+            </div>
+            <div class="model-card selectable"
+                 data-model="coupe">
+                <img src="assets/cars/coupe-black.png">
+                <h3>Coupe</h3>
+                <span>$45,000</span>
+            </div>
+            <div class="model-card selectable"
+                 data-model="supercar">
+                <img src="assets/cars/supercar-black.png">
+                <h3>Supercar</h3>
+                <span>$120,000</span>
+            </div>
+        </div>
+    </section>
     <script src="script.js"></script>
-</body>            
+</body>
 </html>
