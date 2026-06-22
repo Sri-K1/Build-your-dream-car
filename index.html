@@ -21,7 +21,7 @@
         </div>
     </section>
     <section id="exploreScreen" class="screen">
-        <button class="back-btn" id="backFromExplore">Back</button>
+        <button class="back-btn"id="backFromExplore">Back</button>
         <h2>Explore Models</h2>
         <div class="model-grid">
             <div class="model-card">
@@ -32,7 +32,7 @@
             <div class="model-card">
                 <img src="assets/cars/coupe-black.png">
                 <h3>Coupe</h3>
-                <p>Sporty, Agresssive, and Compact.</p>
+                <p>Sporty, Agressive, and Compact.</p>
             </div>
             <div class="model-card">
                 <img src="assets/cars/supercar-black.png">
@@ -63,6 +63,48 @@
                 <img src="assets/cars/supercar-black.png">
                 <h3>Supercar</h3>
                 <span>$120,000</span>
+            </div>
+        </div>
+    </section>
+    <!-- Car Customizations -->
+    <section id="customizerScreen" class="screen">
+        <button class="back-btn" id="backToModels">Back </button>
+        <div class="customizer">
+            <div class="car-view">
+                <img id="carImage" src="assets/cars/sedan-black.png"alt="Car">
+            </div>
+            <div class="controls">
+                <h2>Customize</h2>
+                <div class="option-group">
+                    <label>Paint</label>
+                    <div class="paint-options">
+                        <button class="paint-btn" data-color="black">Black</button>
+                        <button class="paint-btn" data-color="white">White</button>
+                        <button class="paint-btn premium" data-color="red">Red (+$1500)</button>
+                        <button class="paint-btn premium" data-color="blue">Blue (+$1500)</button>
+                    </div>
+                </div>
+                <div class="option-group">
+                    <label>Wheels</label>
+                    <select id="wheelSelect">
+                        <option value="0">Stock</option>
+                        <option value="2000">Sport (+$2,000)</option>
+                        <option value="4000">Racing (+$4,000)</option>
+                    </select>
+                </div>
+                <div class="option-group">
+                    <label>Spoiler</label>
+                    <select id="spoilerSelect">
+                        <option value="0">None</option>
+                        <option value="1500">Sport (+$1,500)</option>
+                        <option value="3000">Race (+$3,000)</option>
+                    </select>
+                </div>
+                <div class="price-box">
+                    <h3>Total Price</h3>
+                    <span id="totalPrice">$35,000</span>
+                </div>
+                <button id="saveBuild">Save Build</button>
             </div>
         </div>
     </section>
