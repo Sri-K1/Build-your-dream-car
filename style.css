@@ -1,222 +1,50 @@
-*{
-    margin: 0;
-    padding:0;
-    box-sizing: border-box;
+:root{
+    --bg: #0a0a0a;
+    --surface: rgba(255,255,255,0.05);
+    --border: rgba(255,255,255,0.10);
+    --text: #ffffff;
+    --text-muted: #8a8a8a;
+    --text-dim: #c0c0c0;
+    --accent: #e31937;
+    --acccent-soft: rgba(227,25,55,0.15);
+    --radius: 12px;
+    --nav-h: 64px;
+    --transition: 0.5s cubic-bezier(0.25,0.46,0.45,0.95);
 }
-body{
-    font-family: Inter, Arial, sans-serif;
-    background: #111827;
-    color: white;
-    min-height: 100vh;
+html,body
+{
+    height: 100%;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', system-ui, sans-serif;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    overflow: hidden;
 }
-/* App */
-.app{
-    width: 100%;
-    min-height: 100vh;
+.screen.active{
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(0);
 }
-header{
-    text-align: center;
-    padding:25px;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-}
-header h1{
-    font-size: 2.4rem;
-    margin-bottom: 6px;
-}
-header p{
-    color: #9ea8b7
-}
-/* Main Layout of Website */
-main{
+/* Navigation */
+nav
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    height: var(--nav-h);
     display: flex;
-    min-height: calc(100vh - 110px);
-}
-.garage{
-    flex: 2;
-    position: relative;
-    overflow:hidden;
-}
-.controls{
-    flex:1;
-    background:#1f2937;
-    padding:30px;
-    border-left:1px soloid rgba(255,255,255,0.1);
-}
-.controls h2{
-    margin-bottom: 25px;
-}
-/* Main Garage Background */
-.background{
-    position: absolute;
-    inset:0;
-    background: linear-gradient(to bottom, #5482d061, #92c2d8d3);
-    z-index: 0;
-}
-.background::after{
-    content:"";
-    position:absolute;
-    bottom: 0;
-    width:100%;
-    height: 35%;
-    background: repeating-linear-gradient(90deg, #a9bbd4 0px, #3b4859 80px, #69b1c9ba 80px, #76b6ca 160px);
-}
-/* Car Container */
-#carContainer{
-    position:absolute;
-    left: 50%;
-    right: 50%;
-    transform: translate(-50%, -50%);
-    width: 520px;
-    height: 260px;
-    z-index: 5; 
-}
-/* Car Body and Roof */
-#car{
-    position:absolute;
-    left: 50%;
-    bottom: 40px;
-    transform:translateX(-50%);
-    width: 420px;
-    height:120px;
-    background:#ff3b30;
-    border-radius: 30px 70px 20px 20px;
-    transition: background 0.3s ease-in, transform 0.3s ease-in;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
-}
-#car::before{
-    content: "";
-    position: absolute;
-    width: 210px;
-    height: 70px;
-    left: 95px;
-    top: -55px;
-    background: inherit;
-    border-radius: 70px 70px 0 0;
-}
-#car::after{
-    content:"";
-    position: absolute;
-    width:40px;
-    height: 25px;
-    right:10px;
-    top: 35px;
-    background: rgba(255, 255, 255, 0.5);
-    border-radius: 8px;
-}
-/* Car Windows and Wheels */
-.window{
-    position: absolute;
-    top: -42px;
-    left: 118px;
-    width: 165px;
-    height: 48px;
-    background: #87ceeb;
-    border-radius: 40px 40px 8px 8px;
-    transition: background 0.5s ease-in;
-}
-.wheel{
-    position: absolute;
-    width: 80px;
-    height: 80px;
-    background: #111;
-    border-radius: 50%;
-    bottom: -35px;
-    border: 5px solid #222;
-    display: flex;
-    justify-content:center;
     align-items: center;
-    transition: transform 0.5s ease;
+    justify-content: center;
+    background: linear-gradient(to bottom, rgba(35, 35, 35, 0.95), transparent);
+    backdrop-filter: blur(5px);
 }
-.wheel-front{
-    right: 45px;
-}
-.wheel-back{
-    left: 45px;
-}
-.rim{
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    background: #c0c0c0;
-}
-/* Spoiler styles */
-#Spoiler{
-    position: absolute;
-    width: 60px;
-    height:10px;
-    right: 40px;
-    top: 95px;
-    background: transparent;
-    border-radius: 10px;
-    transition: all 0.5 ease;
-}
-/* Control group and colors */
-.control-group{
-    margin-bottom: 30px;
-}
-.control-group label{
-    display: block;
-    margin-bottom: 10px;
-    font-weight: 600;
-}
-.colors{
-    display: flex;
-    gap:12px;
-    flex-wrap:wrap;
-}
-.color-btn{
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
-    border: 3px solid white;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-.colors-btn:hover{
-    transform: scale(1.15);
-}
-select{
-    width: 100%;
-    padding: 12px;
-    border: none;
-    border-radius: 12px;
-    background:#303b4c;
-    color: white;
-    font-size: 1rem;
-}
-input[type="range"]
-{
-    width: 100%;
-    cursor: pointer;
-}
-#priceDisplay
-{
-    font-size: 2 rem;
-    font-weight: 700;
-    color:#4ade08;
-}
-/* Buttons */
-.buttons{
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-.buttons button{
-    border: none;
-    padding: 14px;
-    border-radius: 12px;
-    background:#2563eb;
-    color:white;
-    font-size:1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.2s ease;
-}
-.buttons button:hover
-{
-    transform: translateY(-2px);
-    opacity: 0.9;
-}
-#resetBuild{
-    background: #ec3535;
+nav h1{
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.35em;
+    color: var(--text);
+    text-transform: uppercase;
 }
