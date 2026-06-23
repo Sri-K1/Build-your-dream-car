@@ -48,3 +48,40 @@ nav h1{
     color: var(--text);
     text-transform: uppercase;
 }
+/* Home Screen */
+#homeScreen{
+    background:linear-gradient(to bottom, rgba(10,10,10,0.55) 0%, rgba(10,10,10,0.85) 100%),
+    url('assets/cars/supercar-black.png') center 60% / cover no-repeat; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 0 10vh;
+}
+#homeScreen.hero
+{
+    text-align: center;
+    padding: 0 24px;
+}
+#homeScreen.heroh2
+{
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    font-weight: 200;
+    letter-spacing: 0.05em;
+    line-height: 1.15;
+    margin-bottom: 12px;
+}
+#homeScreen.heroP
+{
+    font-weight: 300;
+    font-size: 0.8rem;
+    color: var(--text-dim);
+    letter-spacing: 0.08em;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+.hero-buttons{
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
