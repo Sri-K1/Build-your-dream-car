@@ -14,7 +14,7 @@
     --text-muted: #8a8a8a;
     --text-dim: #c0c0c0;
     --accent: #e31937;
-    --acccent-soft: rgba(227,25,55,0.15);
+    --accent-soft: rgba(227,25,55,0.15);
     --radius: 12px;
     --nav-h: 64px;
     --transition: 0.5s cubic-bezier(0.25,0.46,0.45,0.95);
@@ -28,6 +28,17 @@ html,body
     font-weight: 300;
     -webkit-font-smoothing: antialiased;
     overflow: hidden;
+}
+.screen
+{
+    position: fixed;
+    inset: 0;
+    opacity:0;
+    pointer-events: none;
+    transform: translateY(16px);
+    transition:opacity var(--transition), transform var(--transition);
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 .screen.active{
     opacity: 1;
@@ -128,7 +139,7 @@ button
     transition: background 0.2s, border-color 0.2s, opacity 0.2s, transform 0.2s;
 }
 button:hover{
-    fill: #8a8a8a;
+    background-color: #8a8a8a;
 }
 button:active
 {
@@ -151,7 +162,7 @@ button:active
 }
 .back-btn:hover
 {
-    background: rgba(238, 94, 94, 0.7);
+    background: var(--accent);
     color:var(--text);
 }
 #exploreScreen > h2,
@@ -178,7 +189,7 @@ button:active
 {
     background: var(--surface);
     border: 1px solid var(--border);
-    border-radius: var(--border);
+    border-radius: var(--radius);
     padding: 32px 24px 28px;
     text-align: center;
     transition: background 0.3s, border-color 0.3s, transform 0.3s;
@@ -191,4 +202,27 @@ button:active
   object-fit: contain;
   margin-bottom: 20px;
   filter: drop-shadow(0 8px 24px rgba(0,0,0,0.6));
+}
+.model-card h3 
+{
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing:0.12em;
+  text-transform:uppercase;
+  margin-bottom: 8px;
+}
+
+.model-card p 
+{
+  font-size:0.8rem;
+  color:var(--text-muted);
+  line-height:1.5;
+}
+
+.model-card span {
+  display:inline-block;
+  margin-top:14px;
+  font-size: 0.9rem;
+  font-weight:400;
+  color: var(--text-dim);
 }
