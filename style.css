@@ -430,6 +430,71 @@ select option{
     background: rgba(255,255,255,0.1);
     border-radius: 2px;
 }
+.explore-grid
+{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 24px 80px;
+    margin-top: calc(var(--nav-h) + 56px);
+}
+.explore-card{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 48px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 48px 40px;
+    transition: border 0.3s;
+}
+.explore-card:hover{
+    border-color: rgba(253, 183, 8, 0.561);
+}
+.explore-img-wrap img{
+    width: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 12px 32px rgba(0,0,0,0.7));
+}
+.explore-info h3
+{
+    font-size: 1.5rem;
+    font-weight: 200;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.explore-tagline{
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 32px;
+}
+.explore-specs{
+    display: flex;
+    gap: 32px;
+}
+.spec{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.spec-value{
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--text);
+}
+.spec-label
+{
+    font-size: 0.6rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+}
 /* Better responseiveness */
 @media (max-width: 850px)
 {
