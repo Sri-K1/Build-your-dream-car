@@ -59,20 +59,20 @@ html,body
     transform: translateY(0);
 }
 /* Navigation */
-nav
+nav 
 {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    z-index: 100;
+    z-index: 999;
     height: var(--nav-h);
     display: flex;
     align-items: center;
     justify-content: center;
     background: linear-gradient(to bottom, rgba(35, 35, 35, 0.95), transparent);
-    backdrop-filter: blur(5px);
-    border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+    backdrop-filter: blur(50px);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.435);
 }
 nav h1{
     font-size: 14px;
@@ -88,8 +88,6 @@ nav h1{
 /* Home Screen */
 #homeScreen 
 {
-    background: linear-gradient(to bottom, rgba(10,10,10,0.55) 0%, rgba(10,10,10,0.85) 100%),
-    url('assets/cars/homepic.png') center 60% / cover no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -112,7 +110,7 @@ nav h1{
 #homeScreen .hero 
 {
     position: relative;
-    z-index: 1;
+    z-index: 2;
     text-align: center;
     padding: 0 24px;
 }
@@ -560,7 +558,7 @@ select option{
     letter-spacing: normal;
 }
 .swatch:hover{
-    background-color: goldenrod;
+    background-color: transparent;
 }
 .swatch-circle{
     width: 40px;
