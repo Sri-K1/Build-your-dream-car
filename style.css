@@ -732,6 +732,8 @@ select option{
     padding-bottom:12vh;
 }
 .testdrive-bg{
+    position: absolute;
+    inset: 0;
     width: 100%;
     height:100%;
     object-fit:cover;
@@ -741,11 +743,12 @@ select option{
     position: absolute;
     inset:0;
     background:linear-gradient(to bottom, rgba(10,10,10,0.3) 0%, rgba(10,10,10,0.75) 100%);
+    pointer-events:none;
 }
 .testdrive-content
 {
     position:relative;
-    z-index: 2;
+    z-index:10;
     text-align:center;
     padding:0 24px;
     width:100%;
@@ -781,12 +784,12 @@ select option{
     line-height:2;
 }
 /*Demo sign-up*/
-.signup-box
+.signup-box 
 {
     width:100%;
-    max-width: 440px;
-    background:rgba(255, 255, 255, 0.312);
-    border:1px solid rgba(212, 175, 55, 0.56);
+    max-width:450px;
+    background: rgba(255, 255, 255, 0.095);
+    border:1px solid rgba(212, 175, 55, 0.423);
     border-radius: var(--radius);
     padding:48px 40px;
 }
@@ -820,10 +823,42 @@ select option{
     margin-bottom:32px;
     letter-spacing: 0.1em;
 }
-.form-group input:focus
+.signup-wrap{
+    min-height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:calc(var(--nav-h) + 40px) 24px 60px;
+}
+.form-group 
 {
-    border-color:rgba(212, 175, 55, 0.669) ;
-    box-shadow: 0 0 0 1px rgba(212, 175, 55, 0.295);
+    display: flex;
+    flex-direction:column;
+    gap:7px;
+}
+.form-group label {
+    font-size:0.7rem;
+    font-weight: 500;
+    letter-spacing:0.2em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+}
+.form-group input
+{
+    width:100%;
+    padding: 12px 14px;
+    background:var(--surface);
+    border: 1px solid var(--border);
+    border-radius:6px;
+    color:var(--text);
+    font-family:'Inter', sans-serif;
+    font-size:0.8rem;
+    transition:border-color 0.2s;
+}
+.signup-form{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
 }
 #submitDemo
 {
