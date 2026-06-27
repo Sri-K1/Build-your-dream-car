@@ -14,11 +14,15 @@ document.getElementById('exploreBtn').onclick = () => showScreen('exploreScreen'
 document.getElementById('backFromExplore').onclick = () => showScreen('homeScreen');
 document.getElementById('backFromBuild').onclick = () => showScreen('homeScreen');
 document.getElementById('backToModels').onclick = () => showScreen('buildScreen');
+
 function showScreen(id) 
 {
   document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
-  document.getElementById(id).classList.add('active');
+  const next = document.getElementById(id);
+  next.scrollTop = 0;
+  next.classList.add('active');
 }
+
 /* Car model cards */
 document.querySelectorAll('.model-card.selectable').forEach(card => 
 {
@@ -122,12 +126,18 @@ setInterval(() =>
   slides[currentSlide].classList.add('active');
 }, 4000);
 /* Test Drive nav*/
-document.getElementById('testDriveBtn').onclick = () => showScreen('testDriveScreen');
-document.getElementById('backFromTestDrive').onclick = () => showScreen('homeScreen');
 document.getElementById('bookDemoBtn').onclick = () => showScreen('demoSignupScreen');
-document.getElementById('backFromSignup').onclick = () => showScreen('testDriveScreen');
 document.getElementById('backFromConfirm').onclick = () => showScreen('homeScreen');
 document.getElementById('backHomeBtn').onclick = () => showScreen('homeScreen');
+
+document.getElementById('backFromSignup').onclick = () => 
+{
+  showScreen('homeScreen');
+  setTimeout(() => 
+    {
+      document.getElementById('homeScreen').scrollTop = 999999;
+    }, 50);
+};
 
 /*Submit test drive*/
 document.getElementById('submitDemo').onclick = () => 
