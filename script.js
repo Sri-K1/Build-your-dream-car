@@ -6,7 +6,7 @@ const basePrices =
 {
   sedan: 60000,
   coupe: 85000,
-  supercar: 19000
+  supercar: 190000
 };
 /* Screen Navigation */
 document.getElementById('buildBtn').onclick = () => showScreen('buildScreen');

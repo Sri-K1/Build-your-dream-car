@@ -180,16 +180,15 @@ button:active
 }
 /* Back Button and etc. */
 .back-btn{
-    position: relative;
-    top: calc(var(--nav-h)+16px);
-    bottom: 32px;
+    position: fixed;
+    top: 80px;
     left: 24px;
-    z-index: 50;
+    z-index: 200;
     background:var(--surface);
     color:var(--text-dim);
     border: 1px solid var(--border);
     border-radius: 4px;
-    padding: 8px 20px;
+    padding: 6px 14px;
     font-size: 0.7rem;
     letter-spacing: 0.1em;
     backdrop-filter: blur(8px);
@@ -456,10 +455,22 @@ select option{
     letter-spacing: 0.2em;
     border-radius: 6px;
     margin-top: auto;
+    margin-bottom: 32px;
 }
 #saveBuild:hover{
     background: #e0e0e0;
     transform: none;
+}
+.controls 
+{
+    background: black;
+    border-left: 1px solid var(--border);
+    padding: calc(var(--nav-h) + 48px) 32px 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    backdrop-filter: blur(20px);
+    overflow-y: auto;
 }
 ::-webkit-scrollbar
 {
@@ -642,7 +653,7 @@ select option{
 }
 .spoiler-btn.active{
     border-color: var(--accent);
-    background: goldenrod;
+    background: black;
     color: var(--text);
 }
 .spoiler-img-wrap{
