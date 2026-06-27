@@ -1,5 +1,5 @@
 # Build-your-dream-car
-A website to build your dream spec cars choose your favorite type of car, favorite color, rim, and spoiler for your dream car! (will be adding more customizations and cars soon). Explore this refined and user-friendly website to build cars from BMW to Lamborghini to Mercedes, more cars to be added soon. This website is inspired by major car brands' car customizing/ordering website. Picture credits for this website: Google images, BMW, Lamborghini, Mercedes. Sorry if the images are blurry, I tried fixing it but couldn't.
+A website to build your dream spec cars choose your favorite type of car, favorite color, rim, and spoiler for your dream car! (will be adding more customizations and cars soon). Explore this refined and user-friendly website to build cars from BMW to Lamborghini to Mercedes, more cars to be added soon. This website is inspired by major car brands' car customizing/ordering website. Picture credits for this website: Google images, BMW, Lamborghini, Mercedes. Sorry if the images are blurry, I tried fixing it but couldn't. You can build your car by clicking this link: https://dreamgaragebuildyourdreams.netlify.app/ 
 
 # Tools/Languages used
 - HTMl
@@ -20,5 +20,5 @@ So the main reason for me making this website is that I love cars and I've been 
 <img width="1433" height="683" alt="Screenshot 2026-06-27 at 3 56 07 PM" src="https://github.com/user-attachments/assets/5b6b91a6-40af-4263-b22c-b9ba80871829" />
 
 # Postscript
-The images used in this website belong to car brands such as Mercedes, Lamborghini, and BMW and are sourced from various other websites found in google images. I am planning to expand the customization options, different cars and wider variety of cars, and a more refined website. Even though the website may look really simple, it took me a lot of time to plan it, make it, debug issues and test it. 
+The images used in this website belong to car brands such as Mercedes, Lamborghini, and BMW and are sourced from various other websites found in google images. I am planning to expand the customization options, different cars and wider variety of cars, and a more refined website. Even though the website may look really simple, it took me a lot of time to plan it, make it, debug issues and test it.
 
