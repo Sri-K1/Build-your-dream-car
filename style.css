@@ -286,35 +286,70 @@ button:active
 .car-view
 {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
-    padding: calc(var(--nav-h)+32px) 48px 48px;
-    background: linear-gradient(135deg, #0f0f0f 0%, #060606 100%);
+    padding: calc(var(--nav-h)+32px) 48px;
     position: relative;
+    overflow: hidden;
+    background: black;
 }
-.car-view::after{
-    content:'';
+.car-view::before 
+{
+    content: '';
+    position:absolute;
+    inset: 0;
+    background:radial-gradient(ellipse at 20% 60%, rgba(212,175,55,0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 40%, rgba(227,25,55,0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 100%, rgba(255,255,255,0.04) 0%, transparent 50%);
+    pointer-events:none;
+}
+.car-view::after {
+    content: '';
     position: absolute;
-    bottom: 10%;
+    bottom: 20%;
+    left:10%;
+    right:10%;
+    height:1px;
+    background: linear-gradient(to right, transparent, rgb(137, 35, 35), rgba(212, 175, 55, 0.773), rgba(255, 255, 255, 0.514), transparent);
+}
+.car-stage-floor 
+{
+    position: absolute;
+    bottom: 15%;
     left: 50%;
     transform: translateX(-50%);
-    width: 50%;
-    height: 20px;
-    background: radial-gradient(ellipse, rgba(255,255,255,0.1) 0%, transparent 70%);
-    border-radius: 50%
+    width: 70%;
+    height: 40px;
+    background: radial-gradient(ellipse, rgba(212, 175, 55, 0.409) 0%, transparent 70%);
+    filter: blur(8px);
+    pointer-events: none;
 }
-#carImage
+.car-label{
+    position: absolute;
+    bottom: 32px;
+    left: 48px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.5em;
+    text-transform: uppercase;
+    color: rgba(212, 175, 55, 0.794);
+    pointer-events: none;
+}
+#carImage 
 {
     width: 100%;
     max-width: 600px;
     height: auto;
     object-fit: contain;
-    filter: drop-shadow(0 20px 60px rgba(0,0,0,1))
+    position: relative;
+    z-index: 1;
+    filter: drop-shadow(0 32px 64px rgba(0,0,0,1));
+    transition: opacity 0.35s ease, transform 0.35s ease;
 }
 #carImage.switching
 {
     opacity: 0;
-    transform: scale(0.97);
+    transform: scale(0.95);
 }
 .controls
 {
@@ -536,10 +571,11 @@ select option{
     display: flex;
     flex-direction: column;
     gap: 4px;
+    font-family: 'Montserrat', sans-serif;
 }
 .spec-value{
-    font-size: 1.5rem;
-    font-weight: 300;
+    font-size: 1.8rem;
+    font-weight: 900;
     color: var(--text);
 }
 .spec-label
@@ -622,7 +658,6 @@ select option{
 .wheel-circle:hover 
 {
     border-color: rgba(255,255,255,0.25) !important;
-    background: rgba(255,255,255,0.06);
 }
 .spoiler-options
 {
@@ -635,7 +670,7 @@ select option{
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    background: var(--surface);
+    background: rgba(255, 255, 255, 0.321);
     border: 1px solid var(--border);
     border-radius: 10px;
     padding: 16px 10px 12px;
@@ -643,13 +678,12 @@ select option{
     text-transform: none;
     letter-spacing: normal;
     font-size: 0.7rem;
-    color: var(--text-muted);
+    color: white;
 }
 .spoiler-btn:hover
 {
     border-color: var(--accent);
-    color: var(--text);
-    transform: none;
+    color: var(--accent);
 }
 .spoiler-btn.active{
     border-color: var(--accent);

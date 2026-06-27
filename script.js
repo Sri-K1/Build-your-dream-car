@@ -29,6 +29,7 @@ document.querySelectorAll('.model-card.selectable').forEach(card =>
     wheelCost = 0;
     spoilerCost = 0;
     resetCustomizer();
+    document.getElementById('carLabel').textContent = currentModel.toUpperCase();
     showScreen('customizerScreen');
     };
 });
