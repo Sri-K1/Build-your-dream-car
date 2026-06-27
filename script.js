@@ -121,3 +121,23 @@ setInterval(() =>
   currentSlide = (currentSlide + 1) % slides.length;
   slides[currentSlide].classList.add('active');
 }, 4000);
+/* Test Drive nav*/
+document.getElementById('testDriveBtn').onclick = () => showScreen('testDriveScreen');
+document.getElementById('backFromTestDrive').onclick = () => showScreen('homeScreen');
+document.getElementById('bookDemoBtn').onclick = () => showScreen('demoSignupScreen');
+document.getElementById('backFromSignup').onclick = () => showScreen('testDriveScreen');
+document.getElementById('backFromConfirm').onclick = () => showScreen('homeScreen');
+document.getElementById('backHomeBtn').onclick = () => showScreen('homeScreen');
+
+/*Submit test drive*/
+document.getElementById('submitDemo').onclick = () => 
+{
+  const name = document.getElementById('fullName').value.trim();
+  const email = document.getElementById('emailInput').value.trim();
+  if (!name || !email) 
+  {
+    showToast('Please fill in all fields!!');
+    return;
+  }
+  showScreen('confirmationScreen');
+};
