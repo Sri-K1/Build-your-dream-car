@@ -88,10 +88,7 @@ nav h1{
 /* Home Screen */
 #homeScreen 
 {
-    display: block;
     height: 100%;
-    overflow-y: auto;
-    
 }
 .slide {
     position: absolute;
@@ -105,7 +102,6 @@ nav h1{
 .slide.active {
     opacity: 1;
 }
-#homeScreen nav,
 #homeScreen .hero 
 {
     position: relative;
@@ -282,11 +278,6 @@ button:active
     background: rgba(255, 255, 255, 0.08);
     border-color: rgba(255, 255, 255, 0.22);
 }
-.model-card.selectable.selected {
-    background: rgba(255, 255, 255, 0.09);
-    border-color: rgba(255, 255, 255, 0.4);
-    box-shadow: 0 0 0 1px rgba(255,255,255,0.1), 0 12px 40px rgba(0,0,0,0.5);
-}
 /* Customizer screen and Car screen */
 #customizerScreen
 {
@@ -369,17 +360,6 @@ button:active
     opacity: 0;
     transform: scale(0.95);
 }
-.controls
-{
-    background: rgba(12,12,12,0.96);
-    border-left: 1px solid var(--border);
-    padding: calc(var(--nav-h)+48px) 32px 48px;
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-    backdrop-filter: blur(20px);
-    overflow-y: auto;
-}
 .controls h2{
     font-size: 0.7rem;
     font-weight: 500;
@@ -403,76 +383,6 @@ button:active
     text-transform: uppercase;
     color: var(--text-muted);
 }
-.paint-options
-{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8px;
-}
-.paint-btn{
-    padding: 11px 8px;
-    font-size: 0.7rem;
-    letter-spacing: 0.08em;
-    background: var(--surface);
-    color: var(--text-dim);
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    text-transform: uppercase;
-    transition: background 0.2s, border-color 0.2s, color 0.2s;
-}
-.paint-btn:hover
-{
-    background: var(--accent-soft);
-    color: var(--text);
-    border-color: rgba(255,255,255,0.25);
-    transform: none;
-}
-.paint-btn.screen.active{
-    background: rgba(255,255,255,0.1);
-    border-color: rgba(255,255,255,0.5);
-    color: var(--text);
-}
-.paint-btn.premium
-{
-    position: relative;
-}
-.paint-btn.premium::after
-{
-    content: '✧';
-    position: absolute;
-    top: 4px;
-    right: 6px;
-    font-size: 0.5rem;
-    color: var(--text-muted);
-}
-select
-{
-  width: 100%;
-  padding: 12px 14px;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  color: var(--text-dim);
-  font-family: 'Inter', sans-serif;
-  font-size: 0.78rem;
-  letter-spacing: 0.04em;
-  appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%238a8a8a' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 14px center;
-  cursor: pointer;
-  transition: border-color 0.2s, color 0.2s; 
-}
-select:focus
-{
-    outline: none;
-    border-color: rgba(255,255,255,0.4);
-    color: var(--text);
-}
-select option{
-    background: black;
-    color: var(--text);
-}
 /*Pricing */
 .price-box
 {
@@ -483,14 +393,6 @@ select option{
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-.price-box h3
-{
-    font-size: 0.7rem;
-    font-weight: 500;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--text-muted);
 }
 #totalPrice
 {
@@ -589,7 +491,7 @@ select option{
     display: flex;
     flex-direction: column;
     gap: 4px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: sans-serif;
 }
 .spec-value{
     font-size: 1.8rem;
@@ -671,7 +573,6 @@ select option{
     width: 34px;
     height: 34px;
     object-fit: contain;
-    filter: brightness(1);
 }
 .wheel-circle:hover 
 {
@@ -937,18 +838,10 @@ select option{
 {
     background: white;
 }
-#demoSignupScreen
-{
-    overflow-y:auto;
-}
 #testDriveScreen
 {
     overflow-y:auto;
     height: 100%;
-}
-#confirmationScreen 
-{
-    overflow-y:auto;
 }
 /* Better responseiveness */
 @media (max-width: 850px)
@@ -967,9 +860,6 @@ select option{
         border-left: none;
         border-top: 1px solid var(--border);
         padding: 32px 24px 48px;
-    }
-    #customizerScreen{
-        overflow-y: auto;
     }
     #carImage{
         max-width: 420px;
