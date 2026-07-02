@@ -156,20 +156,23 @@ nav h1{
     background: var(--text);
     color:var(--bg);
     font-weight: 500;
+    transition: var(--transition);
 }
 .hero-buttons button:first-child:hover
 {
-    background: #ae2727db;
+    background: #da2323d0;
 }
 .hero-buttons button:last-child{
     background: transparent;
     color: var(--text);
     border: 1px solid rgba(255,255,255,0.4);
+    transition: var(--transition);
+    border-weight: 600;
 }
 .hero-buttons button:last-child:hover
 {
     background: rgba(58, 54, 54, 0.169);
-    border-color: rgba(255,255,255,0.6);
+    border-color: rgba(255, 183, 1, 0.774);
 }
 /* Buttons */
 button
