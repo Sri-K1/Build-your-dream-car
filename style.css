@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Luxurious+Roman&display=swap');
 /* Reset and Base (makes website better) */
 *, *::before, *::after
 {
@@ -17,7 +17,7 @@
     --accent-soft: rgba(227, 25, 55, 0.386);
     --radius: 12px;
     --nav-h: 64px;
-    --transition: 0.5s cubic-bezier(0.25,0.46,0.45,0.95);
+    --transition: 0.5s cubic-bezier(0.25,0.46,0.45,0.95); /* Used cubic-bezier.com to customize my transition curve */
     --gold: #d4af37;
     --gold-soft: rgba(212, 175, 55, 0.15);
 }
@@ -26,7 +26,7 @@ html,body
     height: 100%;
     background: var(--bg);
     color: var(--text);
-    font-family: 'Inter', system-ui, sans-serif;
+    font-family: 'Luxurious Roman', system-ui, sans-serif;
     font-weight:400;
     -webkit-font-smoothing: antialiased;
     overflow: hidden;
@@ -159,7 +159,7 @@ nav h1{
 }
 .hero-buttons button:first-child:hover
 {
-    background: #e0e0e0;
+    background: #ae2727db;
 }
 .hero-buttons button:last-child{
     background: transparent;
@@ -168,13 +168,13 @@ nav h1{
 }
 .hero-buttons button:last-child:hover
 {
-    background: rgba(255,255,255,0.1);
+    background: rgba(58, 54, 54, 0.169);
     border-color: rgba(255,255,255,0.6);
 }
 /* Buttons */
 button
 {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Exo', sans-serif;
     font-size: 0.8rem;
     font-weight: 400;
     letter-spacing: 0.1em;
@@ -275,8 +275,8 @@ button:active
 }
 .model-card.selectable:hover 
 {
-    background: rgba(255, 255, 255, 0.08);
-    border-color: rgba(255, 255, 255, 0.22);
+    background: rgba(0, 0, 0, 0.64);
+    border-color: rgba(198, 27, 27, 0.746);
 }
 /* Customizer screen and Car screen */
 #customizerScreen
@@ -491,11 +491,11 @@ button:active
     display: flex;
     flex-direction: column;
     gap: 4px;
-    font-family: sans-serif;
+    font-family: 'Luxurious roman', sans-serif;
 }
 .spec-value{
-    font-size: 1.8rem;
-    font-weight: 900;
+    font-size: 1.8rem; 
+    font-weight: 600;
     color: var(--text);
 }
 .spec-label
@@ -532,7 +532,7 @@ button:active
     height: 40px;
     border-radius: 50%;
     display: block;
-    transition: box-shadow 0.2s, transform 0.2s;
+    transition: box-shadow 0.2s;
 }
 .swatch:hover .swatch-circle
 {
@@ -543,7 +543,7 @@ button:active
     box-shadow: 0 0 0 2px var(--bg), 0 0 0 4px rgba(255,255,255,0.8);
 }
 .swatch-name{
-    font-family: sans-serif;
+    font-family: 'Luxurious roman', sans-serif;
     font-size: 0.7rem;
     font-weight: 400;
     letter-spacing: 0.1em;
@@ -752,7 +752,7 @@ button:active
     border: 1px solid var(--border);
     border-radius:6px;
     color:var(--text);
-    font-family:'Inter', sans-serif;
+    font-family:'Exo', sans-serif;
     font-size:0.8rem;
     transition:border-color 0.2s;
 }
