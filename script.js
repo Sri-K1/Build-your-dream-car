@@ -33,6 +33,7 @@ document.querySelectorAll('.model-card.selectable').forEach(card =>
     wheelCost = 0;
     spoilerCost = 0;
     resetCustomizer();
+    document.querySelector('.car-stage').dataset.model = currentModel;
     document.getElementById('carLabel').textContent = currentModel.toUpperCase();
     showScreen('customizerScreen');
     };
@@ -42,7 +43,6 @@ function resetCustomizer()
   document.getElementById('carImage').src = `assets/cars/${currentModel}-${currentColor}.png`;
   document.getElementById('wheelFrontImage').classList.add('hidden');
   document.getElementById('wheelRearImage').classList.add('hidden');
-  document.getElementById('spoilerImage').classList.add('hidden');
   updatePrice();
   document.querySelectorAll('.swatch[data-color]').forEach(b => b.classList.remove('active'));
   document.querySelector('.swatch[data-color="black"]').classList.add('active');
@@ -107,22 +107,8 @@ document.querySelectorAll('.spoiler-btn').forEach(btn =>
     document.querySelectorAll('.spoiler-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
       updatePrice();
-      updateSpoilerPreview(btn);
     };
 });
-function updateSpoilerPreview(btn)
-{
-  const spoilerImage = document.getElementById('spoilerImage');
-  if(spoilerCost === 0)
-  {
-    spoilerImage.classList.add('hidden');
-  }
-  else
-  {
-  spoilerImage.src = btn.querySelector('img').src;
-  spoilerImage.classList.remove('hidden');
-  }
-}
 /*Price and save build */
 function updatePrice() {
   const paintCost = (currentColor === 'red' || currentColor === 'blue') ? 1500 : 0;

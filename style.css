@@ -381,18 +381,16 @@ button:active
 }
 .wheel-front{left:25%;}
 .wheel-rear{right:25%;}
-.spoiler-layer
-{
-    top:40%;
-    right:20%;
-    width: 15%;
-    height: auto;
-}
-#carImage.switching
-{
-    opacity: 0;
-    transform: scale(0.95);
-}
+/*Sedan manually adjusted fit for wheels - used inspect element on loacl host*/
+.car-stage[data-model="sedan"] .wheel-front{left: 10.5%; top: 50%; width: 15%;}
+.car-stage[data-model="sedan"] .wheel-rear{right: 14.5%; top: 50%; width: 15%;}
+/*Coupe manually adjusted fit for wheels - used inspect element on loacl host*/
+.car-stage[data-model="coupe"] .wheel-front{left: 11%; width: 17%; top: 48%;}
+.car-stage[data-model="coupe"] .wheel-rear{right: 12%; width: 17%; top: 47.8%}
+/*Supercar manually adjusted fit for wheels - used inspect element on loacl host*/
+.car-stage[data-model="supercar"] .wheel-front{left: 21.5%; bottom:31%; width: 14%;}
+.car-stage[data-model="supercar"] .wheel-rear{right: 16%; bottom:32%; width: 14%;}
+
 .controls h2{
     font-size: 0.7rem;
     font-weight: 500;

@@ -134,15 +134,15 @@
     <section id="customizerScreen" class="screen">
         <button class="back-btn" id="backToModels">Back</button>
         <div class="customizer">
-            <div class="car-view">
-                <div class="car-stage-floor"></div>
-                <div class ="car-stage">
-                    <img id="carImage" src="Assets/Cars/sedan-black.png" alt="Car">
-                    <img id="wheelFrontImage"alt="Front Wheel" class="car-overlay wheel-front hidden">
-                    <img id="wheelRearImage" alt="Rear Wheel" class="car-overlay wheel-rear hidden">
-                    <img id="spoilerImage" alt="Spoiler" class="car-overlay spoiler-layer hidden">
-                 <div class="car-label" id="carLabel">SEDAN</div>
-                </div>
+        <div class="car-view">
+            <div class="car-stage-floor"></div>
+            <div class="car-stage" data-model="sedan">
+                <img id="carImage" src="assets/Cars/sedan-black.png" alt="Car">
+                <img id="wheelFrontImage" alt="Front Wheel" class="car-overlay wheel-front hidden">
+                <img id="wheelRearImage" alt="Rear Wheel" class="car-overlay wheel-rear hidden">
+            </div>
+            <div class="car-label" id="carLabel">SEDAN</div>
+        </div>
             </div>
             <div class="controls">
                 <h2 class="controls-title">Customize</h2>
@@ -194,7 +194,7 @@
                 </div>
                 <!-- Spoiler option -->
                 <div class="option-group">
-                    <label class="option-label">Spoiler</label>
+                    <label class="option-label">Spoiler -- Will not update in car preview </label>
                     <div class="spoiler-options">
                         <button class="spoiler-btn active" data-spoiler="0">
                             <div class="spoiler-img-wrap">
