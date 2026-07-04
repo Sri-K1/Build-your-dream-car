@@ -136,8 +136,13 @@
         <div class="customizer">
             <div class="car-view">
                 <div class="car-stage-floor"></div>
-                <img id="carImage" src="assets/Cars/sedan-black.png" alt="Car">
+                <div class ="car-stage">
+                    <img id="carImage" src="Assets/Cars/sedan-black.png" alt="Car">
+                    <img id="wheelFrontImage"alt="Front Wheel" class="car-overlay wheel-front hidden">
+                    <img id="wheelRearImage" alt="Rear Wheel" class="car-overlay wheel-rear hidden">
+                    <img id="spoilerImage" alt="Spoiler" class="car-overlay spoiler-layer hidden">
                  <div class="car-label" id="carLabel">SEDAN</div>
+                </div>
             </div>
             <div class="controls">
                 <h2 class="controls-title">Customize</h2>
@@ -212,7 +217,7 @@
                     </div>
                 </div>
                 <div class="price-box">
-                    <span class="price-label">Total Price</span>
+                    <span class="price-label">Total Price:</span>
                     <span id="totalPrice">$35,000</span>
                 </div>
                 <button id="purchaseButton">Purchase Now</button>

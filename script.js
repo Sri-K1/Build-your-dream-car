@@ -40,6 +40,9 @@ document.querySelectorAll('.model-card.selectable').forEach(card =>
 function resetCustomizer() 
 {
   document.getElementById('carImage').src = `assets/cars/${currentModel}-${currentColor}.png`;
+  document.getElementById('wheelFrontImage').classList.add('hidden');
+  document.getElementById('wheelRearImage').classList.add('hidden');
+  document.getElementById('spoilerImage').classList.add('hidden');
   updatePrice();
   document.querySelectorAll('.swatch[data-color]').forEach(b => b.classList.remove('active'));
   document.querySelector('.swatch[data-color="black"]').classList.add('active');
@@ -74,9 +77,28 @@ document.querySelectorAll('.wheel-swatch').forEach(btn =>
       wheelCost = parseInt(btn.dataset.wheel);
       document.querySelectorAll('.wheel-swatch').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
+      updateWheelPreview(btn);
       updatePrice();
     };
 });
+function updateWheelPreview(btn)
+{
+  const frontWheel=document.getElementById('wheelFrontImage');
+  const rearWheel=document.getElementById('wheelRearImage');
+  if(wheelCost === 0)
+  {
+    frontWheel.classList.add('hidden');
+    rearWheel.classList.add('hidden');
+  }
+  else
+  {
+    const wheelSrc=btn.querySelector('img').src;
+    frontWheel.src=wheelSrc;
+    rearWheel.src=wheelSrc;
+    frontWheel.classList.remove('hidden');
+    rearWheel.classList.remove('hidden');
+  }
+}
 /*Spoiler*/
 document.querySelectorAll('.spoiler-btn').forEach(btn => 
 {
@@ -85,8 +107,22 @@ document.querySelectorAll('.spoiler-btn').forEach(btn =>
     document.querySelectorAll('.spoiler-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
       updatePrice();
+      updateSpoilerPreview(btn);
     };
 });
+function updateSpoilerPreview(btn)
+{
+  const spoilerImage = document.getElementById('spoilerImage');
+  if(spoilerCost === 0)
+  {
+    spoilerImage.classList.add('hidden');
+  }
+  else
+  {
+  spoilerImage.src = btn.querySelector('img').src;
+  spoilerImage.classList.remove('hidden');
+  }
+}
 /*Price and save build */
 function updatePrice() {
   const paintCost = (currentColor === 'red' || currentColor === 'blue') ? 1500 : 0;
