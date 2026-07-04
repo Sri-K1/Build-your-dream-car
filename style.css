@@ -388,8 +388,8 @@ button:active
 .car-stage[data-model="coupe"] .wheel-front{left: 11%; width: 17%; top: 48%;}
 .car-stage[data-model="coupe"] .wheel-rear{right: 12%; width: 17%; top: 47.8%}
 /*Supercar manually adjusted fit for wheels - used inspect element on loacl host*/
-.car-stage[data-model="supercar"] .wheel-front{left: 21.5%; bottom:31%; width: 14%;}
-.car-stage[data-model="supercar"] .wheel-rear{right: 16%; bottom:32%; width: 14%;}
+.car-stage[data-model="supercar"] .wheel-front{left: 22%; bottom:31%; width: 13%;}
+.car-stage[data-model="supercar"] .wheel-rear{right: 16%; bottom:32%; width: 13%;}
 
 .controls h2{
     font-size: 0.7rem;
@@ -430,7 +430,7 @@ button:active
     font-size: 1.5rem;
     font-weight: 300;
     letter-spacing: 0.05em;
-    color: var(--text);
+    color: var(--gold);
 }
 #purchaseButton
 {
