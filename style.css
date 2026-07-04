@@ -11,7 +11,7 @@
     --surface: rgba(255,255,255,0.05);
     --border: rgba(255,255,255,0.10);
     --text: #ffffff;
-    --text-muted: #8a8a8a;
+    --text-muted: #bababa;
     --text-dim: #c0c0c0;
     --accent: #e31937;
     --accent-soft: rgba(227, 25, 55, 0.386);
@@ -70,12 +70,13 @@ nav
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(to bottom, rgba(35, 35, 35, 0.95), transparent);
+    background: linear-gradient(to bottom, rgba(35, 35, 35, 0.95), rgba(255, 255, 255, 0.462));
     backdrop-filter: blur(50px);
-    border-bottom: 1px solid rgba(212, 175, 55, 0.435);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.691);
+    border-bottom-width:1px;
 }
 nav h1{
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 500;
     letter-spacing: 0.4em;
     color: var(--text);
@@ -331,7 +332,7 @@ button:active
     transform: translateX(-50%);
     width: 70%;
     height: 40px;
-    background: radial-gradient(ellipse, rgba(212, 175, 55, 0.409) 0%, transparent 70%);
+    background: radial-gradient(ellipse, rgba(212, 175, 55, 0.409) 0%, transparent 90%);
     filter: blur(8px);
     pointer-events: none;
 }
@@ -343,7 +344,7 @@ button:active
     font-weight: 500;
     letter-spacing: 0.5em;
     text-transform: uppercase;
-    color: rgba(212, 175, 55, 0.794);
+    color: rgba(219, 176, 33, 0.794);
     pointer-events: none;
 }
 #carImage 
@@ -355,7 +356,7 @@ button:active
     position: relative;
     z-index: 1;
     filter: drop-shadow(0 32px 64px rgba(0,0,0,1));
-    transition: opacity 0.35s ease, transform 0.35s ease;
+    transition:transform 0.5s ease;
 }
 .car-stage{
     position: relative;
@@ -382,8 +383,8 @@ button:active
 .wheel-front{left:25%;}
 .wheel-rear{right:25%;}
 /*Sedan manually adjusted fit for wheels - used inspect element on loacl host*/
-.car-stage[data-model="sedan"] .wheel-front{left: 10.5%; top: 50%; width: 15%;}
-.car-stage[data-model="sedan"] .wheel-rear{right: 14.5%; top: 50%; width: 15%;}
+.car-stage[data-model="sedan"] .wheel-front{left: 10.5%; top: 50%; width: 14%;}
+.car-stage[data-model="sedan"] .wheel-rear{right: 15%; top: 50%; width: 14%;}
 /*Coupe manually adjusted fit for wheels - used inspect element on loacl host*/
 .car-stage[data-model="coupe"] .wheel-front{left: 11%; width: 17%; top: 48%;}
 .car-stage[data-model="coupe"] .wheel-rear{right: 12%; width: 17%; top: 47.8%}
