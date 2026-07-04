@@ -93,12 +93,11 @@ function updatePrice() {
   const total = basePrices[currentModel] + paintCost + wheelCost + spoilerCost;
   document.getElementById('totalPrice').textContent = '$' + total.toLocaleString('en-US');
 }
-document.getElementById('saveBuild').onclick = () => 
-{
-  const paintCost = (currentColor === 'red' || currentColor === 'blue') ? 1500 : 0;
-  const total = basePrices[currentModel] + paintCost + wheelCost + spoilerCost;
-  showToast(`${currentModel} · ${currentColor} · $${total.toLocaleString('en-US')}`);
+document.getElementById('purchaseButton').onclick = () => 
+  {
+  showScreen('purchaseConfirmationScreen');
 };
+document.getElementById('purchaseBackHomeBtn').onclick = () => showScreen('homeScreen');
 function showToast(message) 
 {
   const toast = document.createElement('div');
